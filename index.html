@@ -43,7 +43,6 @@
         .text.or{
             background-color:rgb(255, 255, 255);
         }
-        
     </style> 
 </head> 
 <body>
@@ -57,26 +56,24 @@
         <h2> Click the button to see our vision:</h2>
         <a class='btn blue' button id="VisionMess">Vision</button></a>
     </div>
-    <h2><p id="Vision"></p></h2>
-    <p id=expla><h1><a class="text or"></a></h1></p>
-<div style = "display:flex ; align-items:center ; justify-content:start;">
-    <h2>Go and meet wrtn:</h2>
-    <a class = "btn orange" href = "https://wrtn.ai/">wrtn</a>
+    <h2><p id="expla"></p></h2>
+    <a class="text or"><h4><p id='Vision'>This site was created to help people.<br>I made these AI with wrtn.<br>Please use it well!</p></h4></a>
+    <div style = "display:flex ; align-items:center ; justify-content:start;">
+        <h2>Go and meet wrtn:</h2>
+        <a class = "btn orange" href = "https://wrtn.ai/">wrtn</a>
+    </div>
     <script>
         var vision_open=false;
         document.getElementById('VisionMess').addEventListener('click', function() {
             var vision=document.getElementById('Vision');
-            var expl=document.getElementById("expla");
             if (!(vision_open)){
                 //if it is closed
                 vision_open=true;
-                vision.innerHTML='<h3>VISION:</h3><hr><h3>The Connection with AI, the Beginning of Empathy</h3><br><br><br><br><br>';
-                expl.textContent="";
+                vision.innerHTML='<h3>VISION:</h3><hr><h4>The Connection with AI, the Beginning of Empathy</h4><br><br><br><br>';
             }else{
                 //if it is not closed
                 vision_open=false;
-                vision.innerHTML='';
-                expl.innerHTML='<h2>This site was created to help people.<br>I made these AI with wrtn.<br>Please use it well!<br></h2>';
+                vision.innerHTML='<h4>This site was created to help people.<br>I made these AI with wrtn.<br>Please use it well!<br></h4>';
             }
         });
     </script>
