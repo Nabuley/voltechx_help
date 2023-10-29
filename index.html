@@ -23,6 +23,12 @@
         .btn.orange:active{
             border-bottom:2px solid rgb(127, 150, 0);
         }
+        .btn.blue{
+            background-color: #1f75d9; border-bottom:5px solid #165195;
+        }
+        .btn.blue:active{
+            border-bottom:2px solid #165195;
+        }
         .text{
             text-decoration: none;
             font-size:1.8rem;
@@ -46,13 +52,33 @@
         <a class = "btn orange" href = "https://nabuley.github.io/voltechx/">home</a>
     </div>
     <hr>
-    <h1>
-    <pre><a class="text or">
-This site was created to help people.
-I made these AI with wrtn.
-Please use it well!</a></pre></h1>
+    <!--만든이:노윤호-->
+    <div style="display:flex ; align-items:center ; justify-content:start;">
+        <h2> Click the button to see our vision:</h2>
+        <a class='btn blue' button id="VisionMess">Vision</button></a>
+    </div>
+    <h2><p id="Vision"></p></h2>
+    <p id=expla><h1><a class="text or"></a></h1></p>
 <div style = "display:flex ; align-items:center ; justify-content:start;">
     <h2>Go and meet wrtn:</h2>
     <a class = "btn orange" href = "https://wrtn.ai/">wrtn</a>
+    <script>
+        var vision_open=false;
+        document.getElementById('VisionMess').addEventListener('click', function() {
+            var vision=document.getElementById('Vision');
+            var expl=document.getElementById("expla");
+            if (!(vision_open)){
+                //if it is closed
+                vision_open=true;
+                vision.innerHTML='<h3>VISION:</h3><hr><h3>The Connection with AI, the Beginning of Empathy</h3><br><br><br><br><br>';
+                expl.textContent="";
+            }else{
+                //if it is not closed
+                vision_open=false;
+                vision.innerHTML='';
+                expl.innerHTML='<h2>This site was created to help people.<br>I made these AI with wrtn.<br>Please use it well!<br></h2>';
+            }
+        });
+    </script>
 </body>
 </html> 
